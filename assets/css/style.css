@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+section {
+    position: fixed;
+    bottom:350px;
+    width: 100%;
+}
+
+.fixed { 
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    }
+
+ .image.is-square {
+    height: 25%;
+    width: 25%;
+    padding: 150px;
+    margin: 30px 10px; 
+  }  
+
+  
