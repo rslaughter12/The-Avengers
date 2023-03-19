@@ -1,105 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
+* {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
- 
 }
-body{
-    background: maroon;
-    color: white;
-}
-::selection{
-    background: black;
-    color: white;
-}
-.info_box {
-position: absolute;
-top: 33%;
-left: 50%;
-transform: translate(-50%, -50%);
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-color: white;
-}
-.search_bar,
-.nav {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-};
-.info_box .info-title{
-    height: 60px;
+
+section {
+    position: fixed;
+    bottom:350px;
     width: 100%;
-    border-bottom: 1px solid lightgrey;
-    display: flex;
-    align-items: center;
-    padding: 0 30px;
-    border-radius: 5px 5px 0 0;
-    font-size: 20px;
-    font-weight: 600;
-    color: white;
-};
-.info_box{
-    width: 540px;
-    background: #fff;
-    border-radius: 5px;
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-       color: white;
 }
-.info_box .info-title{
-    height: 60px;
+
+.fixed { 
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0px;
     width: 100%;
-    border-bottom: 1px solid lightgrey;
-    display: flex;
-    align-items: center;
-    padding: 0 30px;
-    border-radius: 5px 5px 0 0;
-    font-size: 20px;
-    font-weight: 600;
-}
-.info_box .info-list{
-    padding: 15px 30px;
-}
-.info_box .info-list .info{
-    margin: 5px 0;
-    font-size: 17px;
-}
-.info_box .info-list .info span{
-    font-weight: 600;
-}
-.info_box .buttons{
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 30px;
-    border-top: 1px solid lightgrey;
-}
-.info_box .buttons button{
-    margin: 0 5px;
-    height: 40px;
-    width: 100px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid cyan;
-    transition: all 0.3s ease;
-}
-.marvelLogo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
+    }
+
+ .image.is-square {
+    height: 25%;
     width: 25%;
-}
+    padding: 150px;
+    margin: 30px 10px; 
+  }  
+
+  
