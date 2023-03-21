@@ -4,22 +4,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marvel API</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script src="./assets/js/md5.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src=
+'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js'>
+    </script>
+    <title>project1</title>
 </head>
 <body>
-<img class="marvelLogo" src="./assets/images/Marvel_Logo.svg.png" >
-<form class="nav" action="action_page.php">
-  <input class="searchInput" type="text" placeholder="Search.." name="search">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form>
-    <div class="info_box">
-        <div class="info-title"><span>Marvel API Directions</span></div>
-        <div class="info-list">
-            <div class="info">In order to learn more information about a Marvel character, search below, or click on an image of a character below. </div>
-    <script src="./assets/js/script.js"></script>
+    <!--Navbar Rosa's section-->
+    <nav class="navbar is-black">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <button class="button is small is-danger is-light">Home</button>
+          </a>
+        </div>
+        <div class="navbar-start">
+            <div class="field has-addons">
+                <div class="control">
+                  <input class="input" type="text" id="inputField" placeholder="search marvel characters">
+                </div>
+                <div class="control">
+                  <a class="button is-responsive is-danger is-light" id="myButton">
+                    Search
+                  </a>
+                </div>
+        </div>
+        <div class="navbar-end">
+            <figure class="image is-96x96">
+                <!-- <img src="marvel_logo.svg_720.png"> -->
+            </figure>
+            <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="button" id="watchlist" aria-haspopup="true" aria-controls="dropdown-menu3">
+                    <span>Watchlist</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                  <div class="dropdown-content">
+                    
+                  </div>
+                </div>
+              </div>
+        </div>
+    </nav>
+      <!--Navbar End-->
+      <!--Column Section-->
+      <div class="columns">
+        <div class="column is-one-third first">
+            <figure class="image is-128x128">
+                <!-- <img src="538615ca33ab0.jpg"> -->
+            </figure>
+        </div>
+        <div class="column is-half">
+            <div class="columns">
+                <div class="column">
+                  First column
+                </div>
+            </div>
+            <div class="columns second">
+                <div class="column">
+                  Second column
+                </div>
+            </div>
+            <div class="columns third">
+                <div class="column">
+                    <h1>List of Movies</h1>
+                    <ol>
+                      <li class="movie"></li>
+                      <li class="movie"></li>
+                      <li class="movie"></li>
+                      <li class="movie"></li>
+                      <li class="movie"></li>
+                      <li class="movie"></li>
+                      <li class="movie"></li>
+                      <li class="movie"></li>
+                      <li class="movie"></li>
+                      <li class="movie"></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="column">side div</div>
+    </div>
+        <div class="modal modal-1">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title" id="movieTitle-1"></p>
+                <button class="delete" id="closeIcon-1" aria-label="close"></button>
+              </header>
+              <section class="modal-card-body">
+                <div class="columns">
+                  <div class="column is-half" id="poster-1"></div>
+                  <div class="column is-half">
+                    <h1><b>Plot:</b></h1>
+                    <p class ='desc-1'></p><br>
+                    <p class ='desc-1'></p><br>
+                    <p class ='desc-1'></p>
+                  </div>
+                </div>
+              </section>
+              <footer class="modal-card-foot">
+                <button class="button is-success" id="add-to-watchlist">Add to Watchlist</button>
+                <button class="button cancel-1">Cancel</button>
+              </footer>
+            </div>
+          </div>
+          <div class="modal modal-2">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title" id="movieTitle-2"></p>
+                <button class="delete" id="closeIcon-2" aria-label="close"></button>
+              </header>
+              <section class="modal-card-body">
+                <div class="columns">
+                  <div class="column is-half" id="poster-2"></div>
+                  <div class="column is-half">
+                    <h1><b>Plot:</b></h1>
+                    <p class ='desc-2'></p><br>
+                    <p class ='desc-2'></p><br>
+                    <p class ='desc-2'></p>
+                  </div>
+                </div>
+              </section>
+              <footer class="modal-card-foot">
+                <button class="button is-success" id="remove-from-watchlist">Remove From Watchlist</button>
+                <button class="button cancel-2">Cancel</button>
+              </footer>
+            </div>
+          </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/script.js"></script> 
 </body>
 </html>
+<!-- <i class="far fa-search" style="color: #1f5137;"></i> -->
