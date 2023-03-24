@@ -8,50 +8,95 @@
     <script src="./assets/js/md5.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js'>
+    </script>
     <title>project1</title>
 </head>
 <body>
-    <nav class="navbar is-black">
+    <!--Navbar Rosa's section-->
+    <nav class="navbar navbar-bg is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item">
-            <button class="button is small is-danger is-light">Home</button>
+            <img src="marvel_logo.svg_720.png" alt="marvel sign" style="max-height: 100px" class="py-2 px-3">
           </a>
         </div>
-        <div class="navbar-start">
-            <div class="field has-addons">
+        <div class="navbar-item ml-auto">
+          <div class="navbar-end">
+            <p class="control has-icon-right">
+              <input class="input" type="search" placeholder="search marvel character">
+            </p>
                 <div class="control">
                   <input class="input" type="text" id="inputField" placeholder="search marvel characters">
                 </div>
-                <div class="control">
+                <div class="control" onclick="hideElements(); showElements()">
                   <a class="button is-responsive is-danger is-light" id="myButton">
                     Search
                   </a>
                 </div>
+            </div>
+          </div>
         </div>
-        <div class="navbar-end">
-            <figure class="image is-96x96">
-            </figure>
-            <div class="dropdown">
-                <div class="dropdown-trigger">
-                  <button class="button" id="watchlist" aria-haspopup="true" aria-controls="dropdown-menu3">
-                    <span>Watchlist</span>
-                    <span class="icon is-small">
+        <div class="navbar-item ml-auto">
+          <div class="navbar-end">
+            <div class="dropdown is-active">
+              <div class="dropdown-trigger">
+                  <button class="button is-danger" id="watchlist" aria-haspopup="true" aria-controls="dropdown-menu3">
+                    <buttom>Watchlist</buttom>
+                    <span class="icon is-normal is-danger">
                       <i class="fas fa-angle-down" aria-hidden="true"></i>
                     </span>
                   </button>
-                </div>
+              </div>
                 <div class="dropdown-menu" id="dropdown-menu3" role="menu">
                   <div class="dropdown-content">
                   </div>
                 </div>
-              </div>
+            </div>
+          </div>
         </div>
     </nav>
     <!--Orianna's work on CSS-->
       <div class="columns m-4">
         <div class="column mt-2 is-one-third first">
             <img class="is-fullwidth" id="character-img">
+      <!--Navbar End-->
+      <!--Column Section-->
+      <!-- when done styling remove is hidden!!!! -->
+      <div class="introColumns is-mobile is-centered" id= "introColumns">
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <img class="marvelLogoGif" src="https://media.tenor.com/JaV6dQCBxVcAAAAC/marvel-intro.gif" >
+              <p class="title">Welcome Fellow Avengers!</p>
+              <p class="subtitle">You are here because you wish to learn more about the characters, movies, and powers that the superheroes in the Marvel Universe has!</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <img class="marvelLogoGif" src="https://media0.giphy.com/media/1qErVv5GVUac8uqBJU/giphy.gif?cid=6c09b952cc3aa853f981f55ac19c8c3ccd2e3a6e7c10dbc1&rid=giphy.gif&ct=g" >
+              <p class="title">How to search!</p>
+              <p class="subtitle">To learn more about a specific character, search their name in the search bar above (Ex: "Hulk"). If you don't know where to start, click on a character at the bottom of the page!  </p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <img class="marvelLogoGif" src="https://allears.net/wp-content/uploads/2020/10/avengers-gif.gif" >
+              <p class="title">Watchlist Feature!</p>
+              <p class="subtitle">If you find a movie that you would like to save to your future watchlist, click on it, and then click "add to watchlist" this will store it for you and your future reference!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-hidden" id="searchElements">  
+      <div class="columns is-hidden">
+        <div class="column is-one-third first">
+            <figure class="image is-128x128">
+                <!-- <img src="538615ca33ab0.jpg"> -->
+            </figure>
         </div>
         <div class="column is-half">
             <div class="columns mt-1">
@@ -132,6 +177,64 @@
               </footer>
             </div>
           </div>
+<!--Melissa's footer / images create section to remain independent -->
+<footer>
+  <div class="columns">
+    <div class="column">
+      <figure class="image is-128x128 image is-square is-clickable ml-6 mt-5 ">
+        <img src="./assets/images/black-widow.png">
+      </figure>
+      <p class="title is-3 has-text-black has-text-centered ">Black Widow</p>
+      <p class="subtitle is-5 has-text-black has-text-centered">Despite super spy Natasha Romanoff's checkered past, she's become one of the S.H.I.E.L.D.'s
+        most deadly assassins and a frequent member of the Avengers.
+      </p>
+    </div>
+    <div class="column">
+      <figure class="image is-128x128 image is-square is-clickable ml-6 mt-5">
+        <img src="./assets/images/hulk.png">
+      </figure>
+      <p class="title is-3 has-text-black has-text-centered ">The Hulk</p>
+      <p class="subtitle is-5 has-text-black has-text-centered">Dr. Bruce Banner lives a life caught between the soft-spoken scientist he's always 
+        been and the uncontrollable green monster powered by his rage.
+      </p>
+    </div>
+    <div class="column">
+      <figure class="image is-128x128 image is-square is-clickable ml-6 mt-5">
+        <img src="./assets/images/iron-man.png">
+      </figure>
+      <p class="title is-3 has-text-black has-text-centered ">Iron Man</p>
+      <p class="subtitle is-5 has-text-black has-text-centered">Genius. Billionaire. Philanthropist. Tony Stark's confidence is only matched by his 
+        high-flying abilities as the hero called Iron Man.
+      </p>
+    </div>
+    <div class="column">
+      <figure class="image is-128x128 image is-square is-clickable ml-6 mt-5">
+        <img src="./assets/images/captain-america.png">
+      </figure>
+      <p class="title is-3 has-text-black has-text-centered ">Captain America</p>
+      <p class="subtitle is-5 has-text-black has-text-centered">Recipient of the Super Soldier serum, World War II hero Steve Rogers fights for
+        American ideals as one of the world's mightiest heroes and the leader of the Avengers.</p>
+    </div>
+    <div class="column">
+      <figure class="image is-128x128 image is-square is-clickable ml-6 mt-5">
+        <img src="./assets/images/captain-marvel.png ">
+      </figure>
+      <p class="title is-3 has-text-black has-text-centered">Captain Marvel</p>
+      <p class="subtitle is-5 has-text-black has-text-centered ">When head of NASA security Carol Danvers was exposed to a powerful alien device, she
+        transformed into the mighty cosmic powered hero, Captain Marvel!
+      </p>
+    </div>
+    <div class="column">
+      <figure class="image is-128x128 image is-square is-clickable ml-6 mt-5">
+        <img src="./assets/images/spiderman.png">
+      </figure>
+      <p class="title is-3 has-text-black has-text-centered">Spider-Man</p>
+      <p class="subtitle is-5 has-text-black has-text-centered">Bitten by a radioactive spider, Peter Parker's arachnid abilities give him amazing powers
+        he uses to help others, while his personal life continues to offer plenty of obstacles.
+      </p> 
+    </div>
+  </div>
+</footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/script.js"></script> 
 </body>
