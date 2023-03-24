@@ -1,3 +1,7 @@
+.navbar-bg {
+    background-image: url(./marvel.jpg);
+    background-position: 0%;
+}
 .marvelPhotos {
     display: flex;
     flex-direction: row;
