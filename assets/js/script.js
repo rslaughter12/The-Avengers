@@ -172,3 +172,11 @@ $('#remove-from-watchlist').on('click', function(){
     closeModal_2();
 });
 $(".dropdown-content").on("click",".dropdown-item",renderMovieFromWatchlist);
+
+
+function hideElements() {
+    document.getElementById("introColumns").style.display = "none";
+  }
+  function showElements() {
+    document.getElementById("searchElements").classList.remove("is-hidden");
+  }
