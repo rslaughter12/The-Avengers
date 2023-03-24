@@ -19,6 +19,60 @@
     margin-left: 735px;
     margin-top: 100px;
 }
+
+body {
+    background: linear-gradient(gray 10%, white, black);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.character {
+    text-shadow: 2px 2px 5px black;
+    color: black;
+    font-family: "rock Salt", "permanent Marker", sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-top: 0px;
+}
+
+.minibio,
+.movies{
+    text-decoration: underline;
+    text-shadow: 2px 2px 5px black;
+    color: #b89c9c;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 40px
+}
+
+.card {
+    border-radius: 4px;
+    box-shadow: 5px 5px 8px black;
+    padding: 16px;
+    background: linear-gradient( rgba(171, 160, 87, 0.28), white, gold);
+}
+
+.second {
+    font-size: 20px;
+    color: black;
+}
+
+li:hover {
+    color: darkred;
+    text-shadow: 2px 2px 5px white;
+    cursor: grab;
+}
+
+.two-columns {
+    column-count: 2;
+    column-gap: 30px;
+    font-size: 20px;
+    color: white;
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-bottom: 80px;
+  }
 .introColumns {
     display: flex;
     justify-content: center;
