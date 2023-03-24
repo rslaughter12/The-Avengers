@@ -26,7 +26,7 @@
                 <div class="control">
                   <input class="input" type="text" id="inputField" placeholder="search marvel characters">
                 </div>
-                <div class="control">
+                <div class="control" onclick="hideElements(); showElements()">
                   <a class="button is-responsive is-danger is-light" id="myButton">
                     Search
                   </a>
@@ -55,7 +55,37 @@
     </nav>
       <!--Navbar End-->
       <!--Column Section-->
-      <div class="columns">
+      <!-- when done styling remove is hidden!!!! -->
+      <div class="introColumns is-mobile is-centered" id= "introColumns">
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <img class="marvelLogoGif" src="https://media.tenor.com/JaV6dQCBxVcAAAAC/marvel-intro.gif" >
+              <p class="title">Welcome Fellow Avengers!</p>
+              <p class="subtitle">You are here because you wish to learn more about the characters, movies, and powers that the superheroes in the Marvel Universe has!</p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <img class="marvelLogoGif" src="https://media0.giphy.com/media/1qErVv5GVUac8uqBJU/giphy.gif?cid=6c09b952cc3aa853f981f55ac19c8c3ccd2e3a6e7c10dbc1&rid=giphy.gif&ct=g" >
+              <p class="title">How to search!</p>
+              <p class="subtitle">To learn more about a specific character, search their name in the search bar above (Ex: "Hulk"). If you don't know where to start, click on a character at the bottom of the page!  </p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <img class="marvelLogoGif" src="https://allears.net/wp-content/uploads/2020/10/avengers-gif.gif" >
+              <p class="title">Watchlist Feature!</p>
+              <p class="subtitle">If you find a movie that you would like to save to your future watchlist, click on it, and then click "add to watchlist" this will store it for you and your future reference!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-hidden" id="searchElements">  
         <div class="column is-one-third first">
             <figure class="image is-128x128">
                 <!-- <img src="538615ca33ab0.jpg"> -->
