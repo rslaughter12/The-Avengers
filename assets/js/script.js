@@ -14,8 +14,13 @@ var strHash = md5(ts + privateKey + publicKey);
 console.log(strHash);
 let watchlist = [];
 getWatchlist();
-function searchCharacter() {
-    const input = $inputEl.val().trim();
+function searchCharacter(character) {
+    let input;
+    if(character){
+        input=character
+    } else {
+        input= $inputEl.val().trim();
+    }
     console.log(input);
     const url = `https://gateway.marvel.com/v1/public/characters?name=${input}&limit=20&ts=${ts}&apikey=${publicKey}&hash=${strHash}`;
     // const url = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=spi&limit=20&ts=${ts}&apikey=${publicKey}&hash=${strHash}`;
@@ -25,6 +30,8 @@ function searchCharacter() {
     fetch(url)
     .then(response => response.json())
     .then(function(data) {
+        $firstDiv.html("")
+        $secondDiv.html("")
         console.log(data.data);
         const $img = $("<img>");
         const $pTag = $("<p>");
@@ -35,8 +42,13 @@ function searchCharacter() {
         console.log(data.data.results[0].description);
     })
 }
-function listMovies() {
-    const input = $inputEl.val().trim();
+function listMovies(character) {
+    let input;
+    if(character){
+        input=character
+    } else {
+        input= $inputEl.val().trim();
+    }
     const OMDB_URL =  `https://www.omdbapi.com/?s=${input}&apikey=${API_KEY}&type=movie`;
     fetch(OMDB_URL)
     .then(function(response){return response.json();})
@@ -48,6 +60,8 @@ function listMovies() {
             // var li = document.createElement("li");
             let text = data.Search[i].Title;
             console.log(text);
+            console.log(text);
+           // $liEl.eq(i).text("");
             $liEl.eq(i).text(text);
             // listEl.appendChild(li);
         }
@@ -179,4 +193,11 @@ function hideElements() {
   }
   function showElements() {
     document.getElementById("searchElements").classList.remove("is-hidden");
+  }
+
+  function clickCharacter(event) {
+    let character = event.target.dataset.character
+    console.log(character)
+    showElements()
+    searchCharacter(character)
   }
