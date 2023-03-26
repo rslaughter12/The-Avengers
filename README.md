@@ -11,7 +11,7 @@ Each image and button serves a purpose that will allow the user to easily naviga
 # Screenshot
 
 # Credits
-Marvel API, OMDB API, Bulma CSS, UC Berkeley Cooding bootcamp, Tutors, TA
+Marvel API, OMDB API, Bulma CSS, UC Berkeley Coding bootcamp, Tutors, TA
 
 # License
 MIT License
