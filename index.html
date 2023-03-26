@@ -16,20 +16,17 @@
     <!--Navbar Rosa's section-->
     <nav class="navbar navbar-bg is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item">
-            <img src="marvel_logo.svg_720.png" alt="marvel sign" style="max-height: 100px" class="py-2 px-3">
+          <a href="/" class="home-button">
+            <img src="marvel_logo.svg_720.png" alt="home" style="max-height: 100px" class="py-2 px-3">
           </a>
         </div>
         <div class="navbar-item ml-auto">
           <div class="navbar-end">
-            <!-- <p class="control has-icon-right">
-              <input class="input" type="search" placeholder="search marvel character">
-            </p> -->
-                <div class="control">
-                  <input class="input" type="text" id="inputField" placeholder="search marvel characters">
-                </div>
+                <p class="control has-icon-centered">
+                  <input class="input" type="search" id="inputField" placeholder="search marvel characters">
+                </p>
                 <div class="control" onclick="hideElements(); showElements()">
-                  <a class="button is-responsive is-danger is-light" id="myButton">
+                  <a class="button is-responsive is-danger" id="myButton">
                     Search
                   </a>
                 </div>
@@ -38,9 +35,9 @@
         </div>
         <div class="navbar-item ml-auto">
           <div class="navbar-end">
-            <div class="dropdown is-active">
+            <div class="dropdown">
               <div class="dropdown-trigger">
-                  <button class="button is-danger" id="watchlist" aria-haspopup="true" aria-controls="dropdown-menu3">
+                  <button class="button is-danger ml-6" id="watchlist" aria-haspopup="true" aria-controls="dropdown-menu3">
                     <buttom>Watchlist</buttom>
                     <span class="icon is-normal is-danger">
                       <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -93,36 +90,30 @@
       <!-- Orianna's section starts here -->
       <div class="columns is-hidden" id="searchElements">  
       <!-- <div class="columns"> -->
-        <div class="column is-one-third first">
-            <figure class="image is-128x128">
-                <!-- <img src="538615ca33ab0.jpg"> -->
-            </figure>
-        </div>
+        <div class="column is-one-third">
+          <figure class="image is-128x128">
+              
+          </figure>
+          <img src="" alt="" id="character-img">
+      </div>
         <div class="column is-half">
             <div class="columns mt-1">
                 <div class="column has-border-white">
-                  <h1 class="character has-text-centered card">Character</h1>
+                  <h1 class="character has-text-centered card" id="character-title">Character</h1>
                 </div>
             </div>
             <div class="columns">
-                <div class="column second">
-                  <h1 class="minibio has-text-centered">Mini Bio</h1>
+                <div class="column">
+                  <h1 class="minibio has-text-centered" id="bio">Mini Bio</h1>
+                  <p class="mt-2" id="description"></p><br>
+                  <a class ="is-danger" href="" target="_blank" id="comicsLink"><b>Click here for the Comics!</b></a>
                 </div>
             </div>
             <div class="columns third">
                 <div class="column">
                     <h1 class="movies has-text-centered">List of Movies</h1>
-                    <ol class="two-columns">
-                      <li class="movie"></li>
-                      <li class="movie"></li>
-                      <li class="movie"></li>
-                      <li class="movie"></li>
-                      <li class="movie"></li>
-                      <li class="movie"></li>
-                      <li class="movie"></li>
-                      <li class="movie"></li>
-                      <li class="movie"></li>
-                      <li class="movie"></li>
+                    <ol class="two-columns" id="movies">
+                      
                     </ol>
                 </div>
             </div>
@@ -130,94 +121,121 @@
     </div>
     <!--End of Orianna's work-->
 
-    <!-- modal-1 starts here -->
-        <div class="modal modal-1">
-            <div class="modal-background"></div>
-            <div class="modal-card">
-              <header class="modal-card-head">
-                <p class="modal-card-title" id="movieTitle-1"></p>
-                <button class="delete" id="closeIcon-1" aria-label="close"></button>
-              </header>
-              <section class="modal-card-body">
-                <div class="columns">
-                  <div class="column is-half" id="poster-1"></div>
-                  <div class="column is-half">
-                    <h1><b>Plot:</b></h1>
-                    <p class ='desc-1'></p><br>
-                    <p class ='desc-1'></p><br>
-                    <p class ='desc-1'></p>
-                  </div>
-                </div>
-              </section>
-              <footer class="modal-card-foot">
-                <button class="button is-success" id="add-to-watchlist">Add to Watchlist</button>
-                <button class="button cancel-1">Cancel</button>
-              </footer>
+  <!-- modal-1 starts here -->
+  <div class="modal modal-1">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title" id="movieTitle-1"></p>
+          <button class="delete" id="closeIcon-1" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="columns">
+            <div class="column is-half" id="poster-1"></div>
+            <div class="column is-half">
+              <h1><b>Plot:</b></h1>
+              <p class ='desc-1'></p><br>
+              <p class ='desc-1'></p><br>
+              <p class ='desc-1'></p>
             </div>
           </div>
-    <!-- modal-1 ends here  -->
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success" id="add-to-watchlist">Add to Watchlist</button>
+          <button class="button cancel-1">Cancel</button>
+        </footer>
+      </div>
+    </div>
+  <!-- modal-1 ends here  -->
 
-    <!-- modal-2 starts here -->
-          <div class="modal modal-2">
-            <div class="modal-background"></div>
-            <div class="modal-card">
-              <header class="modal-card-head">
-                <p class="modal-card-title" id="movieTitle-2"></p>
-                <button class="delete" id="closeIcon-2" aria-label="close"></button>
-              </header>
-              <section class="modal-card-body">
-                <div class="columns">
-                  <div class="column is-half" id="poster-2"></div>
-                  <div class="column is-half">
-                    <h1><b>Plot:</b></h1>
-                    <p class ='desc-2'></p><br>
-                    <p class ='desc-2'></p><br>
-                    <p class ='desc-2'></p>
-                  </div>
-                </div>
-              </section>
-              <footer class="modal-card-foot">
-                <button class="button is-success" id="remove-from-watchlist">Remove From Watchlist</button>
-                <button class="button cancel-2">Cancel</button>
-              </footer>
-            </div>
+  <!-- modal-2 starts here -->
+  <div class="modal modal-2">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title" id="movieTitle-2"></p>
+        <button class="delete" id="closeIcon-2" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="columns">
+          <div class="column is-half" id="poster-2"></div>
+          <div class="column is-half">
+            <h1><b>Plot:</b></h1>
+            <p class ='desc-2'></p><br>
+            <p class ='desc-2'></p><br>
+            <p class ='desc-2'></p>
           </div>
-    <!--modal-2 ends here  -->
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" id="remove-from-watchlist">Remove From Watchlist</button>
+        <button class="button cancel-2">Cancel</button>
+      </footer>
+    </div>
+  </div>
+  <!--modal-2 ends here  -->
+  <!-- modal-3 starts here -->
+  <div class="modal modal-3">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head has-background-info">
+        <p class="modal-card-title has-text-centered" id="error"></p>
+        <button class="delete" id="closeIcon-3" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p class="has-text-centered" id="note"></p>
+      </section>
+    </div>
+  </div>
+  <!-- modal-3 ends here -->
+
+  <div class="modal modal-4">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head has-background-info">
+        <p class="modal-card-title has-text-centered" id="error">Error!</p>
+        <button class="delete" id="closeIcon-4" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p class="has-text-centered" id="modal-4-note"></p>
+      </section>
+    </div>
+  </div>
 
 <!--Melissa's footer / images create section to remain independent -->
 <footer>
   <div class="columns">
-    <div class="column">
+    <div class="column footer-img">
       <figure class="image is-128x128 image is-square is-clickable ml-6 mt-5 ">
         <img src="./assets/images/black-widow.png" data-character="black widow" onClick="clickCharacter(event); hideElements(); showElements()">
       </figure>
       <p class="title is-3 has-text-grey-light has-text-centered  ">Black Widow</p>
     </div>
-    <div class="column">
+    <div class="column footer-img">
       <figure class="image is-128x128 image is-square is-clickable ml-6 mt-5">
         <img src="./assets/images/hulk.png" data-character="hulk" onClick="clickCharacter(event); hideElements(); showElements()">
       </figure>
       <p class="title is-3 has-text-grey-light has-text-centered ">Hulk</p>
     </div>
-    <div class="column">
+    <div class="column footer-img">
       <figure class="image is-128x128 image is-square is-clickable ml-6 mt-5">
         <img src="./assets/images/iron-man.png" data-character="iron man" onClick="clickCharacter(event); hideElements(); showElements()">
       </figure>
       <p class="title is-3 has-text-grey-light has-text-centered ">Iron Man</p>
     </div>
-    <div class="column">
+    <div class="column footer-img">
       <figure class="image is-128x128 image is-square is-clickable ml-6 mt-5">
         <img src="./assets/images/captain-america.png" data-character="captain america" onClick="clickCharacter(event); hideElements(); showElements()">
       </figure>
       <p class="title is-3 has-text-grey-light has-text-centered ">Captain America</p>
     </div>
-    <div class="column">
+    <div class="column footer-img">
       <figure class="image is-128x128 image is-square is-clickable ml-6 mt-5">
         <img src="./assets/images/captain-marvel.png" data-character="captain marvel" onClick="clickCharacter(event); hideElements(); showElements()">
       </figure>
       <p class="title is-3 has-text-grey-light has-text-centered">Captain Marvel</p>
     </div>
-    <div class="column">
+    <div class="column footer-img">
       <figure class="image is-128x128 image is-square is-clickable ml-6 mt-5">
         <img src="./assets/images/spiderman.png" data-character="spiderman" onClick="clickCharacter(event)" >
       </figure>
@@ -226,6 +244,7 @@
   </div>
 </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./assets/js/script.js"></script> 
 </body>
 </html>

@@ -60,7 +60,7 @@ body {
 
 li:hover {
     color: darkred;
-    text-shadow: 2px 2px 5px white;
+    text-shadow: 2px 2px 5px black;
     cursor: grab;
 }
 
@@ -68,12 +68,35 @@ li:hover {
     column-count: 2;
     column-gap: 30px;
     font-size: 20px;
-    color: white;
+    color: rgb(107, 85, 85);
     margin-left: 40px;
     margin-right: 10px;
     margin-bottom: 80px;
   }
+  
 .introColumns {
     display: flex;
     justify-content: center;
 }
+@media (max-width: 768px) {
+    .introColumns {
+      flex-direction: column;
+    }
+    .button {
+        margin-top: 5px;
+    }
+}
+
+.ui-autocomplete {
+    color: red !important;
+    /* -moz-border-radius: 15px;
+    border-radius: 15px; */
+    background-color: white;
+    width : fit-content;
+    z-index: 100 !important;
+}
+
+.ui-autocomplete div:hover {
+    /*when hovering an item:*/
+    background-color: #1060a5;
+  }
