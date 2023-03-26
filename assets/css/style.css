@@ -85,3 +85,17 @@ li:hover {
         margin-top: 5px;
     }
 }
+
+.ui-autocomplete {
+    color: red !important;
+    /* -moz-border-radius: 15px;
+    border-radius: 15px; */
+    background-color: white;
+    width : fit-content;
+    z-index: 100 !important;
+}
+
+.ui-autocomplete div:hover {
+    /*when hovering an item:*/
+    background-color: #1060a5;
+  }
