@@ -77,3 +77,11 @@ li:hover {
     display: flex;
     justify-content: center;
 }
+@media (max-width: 768px) {
+    .introColumns {
+      flex-direction: column;
+    }
+    .button {
+        margin-top: 5px;
+    }
+}
