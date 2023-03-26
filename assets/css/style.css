@@ -20,12 +20,15 @@
     margin-top: 100px;
 }
 
+/* Orianna's CSS */
+/* Styled background of the page */
 body {
     background: linear-gradient(gray 10%, white, black);
     background-attachment: fixed;
     background-size: cover;
 }
 
+/* Added style to the first column 'character */
 .character {
     text-shadow: 2px 2px 5px black;
     color: black;
@@ -35,6 +38,7 @@ body {
     margin-top: 0px;
 }
 
+/* set style to the second and third column */
 .minibio,
 .movies{
     text-decoration: underline;
@@ -46,6 +50,8 @@ body {
     margin-bottom: 40px
 }
 
+/* Created a class 'card' for the first column */
+/* Styled the first column 'character' */
 .card {
     border-radius: 4px;
     box-shadow: 5px 5px 8px black;
@@ -53,17 +59,23 @@ body {
     background: linear-gradient( rgba(171, 160, 87, 0.28), white, gold);
 }
 
+/* Adjusted the description */
+/* set font size and color to user comfort */
 .second {
     font-size: 20px;
     color: black;
 }
 
+/* When hovering over the list:
+cursor change to 'grab' 
+color change and add text shadow */
 li:hover {
     color: darkred;
     text-shadow: 2px 2px 5px black;
     cursor: grab;
 }
 
+/* Created a class 'two-columns' so that it would fill in the screen */
 .two-columns {
     column-count: 2;
     column-gap: 30px;
