@@ -13,8 +13,8 @@ let watchlist = [];
 getWatchlist();
 
 
-function searchCharacter() {
-    let input = $inputEl.val().trim();
+function searchCharacter(input) {
+    // let input = $inputEl.val().trim();
     let character = '';
     if(input === 'Spider-Man'){
         character = 'Spider-Man (Peter Parker)';
@@ -50,8 +50,8 @@ function searchCharacter() {
         $inputEl.val('');
     })
 }
-function listMovies() {
-    const input = $inputEl.val().trim();
+function listMovies(input) {
+    // const input = $inputEl.val().trim();
     const OMDB_URL =  `https://www.omdbapi.com/?s=${input}&apikey=${API_KEY}&type=movie`;
     fetch(OMDB_URL)
     .then(function(response){return response.json();})
@@ -208,7 +208,9 @@ $(function () {
     });
 });
 $buttonEl.on("click", function(){
-    searchCharacter();
+    let input = $inputEl.val().trim();
+    console.log(input);
+    searchCharacter(input);
 });
 $thirdDiv.on("click", renderMovie);
 $('.cancel-1').on('click', closeModal_1);
@@ -244,5 +246,5 @@ function hideElements() {
     let character = event.target.dataset.character
     console.log(character)
     showElements()
-    searchCharacter(character)
+    searchCharacter(character);
   }
