@@ -110,5 +110,10 @@ li:hover {
 
 .ui-autocomplete div:hover {
     /*when hovering an item:*/
-    background-color: #1060a5;
-  }
+    background-color: #88b6de;
+}
+
+.dropdown-content p:hover {
+    background-color: #88b6de;
+    cursor: pointer;
+}
