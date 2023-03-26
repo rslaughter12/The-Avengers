@@ -78,3 +78,25 @@ li:hover {
     display: flex;
     justify-content: center;
 }
+@media (max-width: 768px) {
+    .introColumns {
+      flex-direction: column;
+    }
+    .button {
+        margin-top: 5px;
+    }
+}
+
+.ui-autocomplete {
+    color: red !important;
+    /* -moz-border-radius: 15px;
+    border-radius: 15px; */
+    background-color: white;
+    width : fit-content;
+    z-index: 100 !important;
+}
+
+.ui-autocomplete div:hover {
+    /*when hovering an item:*/
+    background-color: #1060a5;
+  }
