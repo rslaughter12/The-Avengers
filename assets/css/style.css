@@ -60,7 +60,7 @@ body {
 
 li:hover {
     color: darkred;
-    text-shadow: 2px 2px 5px white;
+    text-shadow: 2px 2px 5px black;
     cursor: grab;
 }
 
@@ -68,11 +68,12 @@ li:hover {
     column-count: 2;
     column-gap: 30px;
     font-size: 20px;
-    color: white;
+    color: rgb(107, 85, 85);
     margin-left: 40px;
     margin-right: 10px;
     margin-bottom: 80px;
   }
+  
 .introColumns {
     display: flex;
     justify-content: center;
