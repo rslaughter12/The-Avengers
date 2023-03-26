@@ -50,7 +50,8 @@ function searchCharacter() {
         $inputEl.val('');
     })
 }
-function listMovies(input) {
+function listMovies() {
+    const input = $inputEl.val().trim();
     const OMDB_URL =  `https://www.omdbapi.com/?s=${input}&apikey=${API_KEY}&type=movie`;
     fetch(OMDB_URL)
     .then(function(response){return response.json();})
@@ -237,4 +238,11 @@ function hideElements() {
   }
   function showElements() {
     document.getElementById("searchElements").classList.remove("is-hidden");
+  }
+
+  function clickCharacter(event) {
+    let character = event.target.dataset.character
+    console.log(character)
+    showElements()
+    searchCharacter(character)
   }
