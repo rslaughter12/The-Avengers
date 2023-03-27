@@ -12,10 +12,10 @@ let watchlist = [];
 
 getWatchlist();
 
-// Function added in order to populate information about spider-man due
-// OMDb API not populating Spider-Man.
 function searchCharacter(input) {
     let character = '';
+    // if condition is added in order to populate information about spider-man due
+    // OMDb API not populating Spider-Man.
     if(input === 'Spider-Man'){
         character = 'Spider-Man (Peter Parker)';
     }else {
@@ -23,7 +23,7 @@ function searchCharacter(input) {
     }
     const url = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${character}&limit=20&ts=${ts}&apikey=${publicKey}&hash=${strHash}`;
     
-    // Function to have a error message populate in case a character's name
+    // if condition to have a error message populate in case a character's name
     // is written incorrectly
     fetch(url) 
     .then(response => response.json())

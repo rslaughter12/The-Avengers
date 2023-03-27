@@ -3,10 +3,10 @@
 https://github.com/rslaughter12/The-Avengers.git
 
 # Description
-Our team created a website that will allow it's viewers to learn more about the Marvel characters as well as what movies they part take in.
+Our team created a website that will allow it's viewers to learn more about the Marvel characters as well as what movies they take part in.
 
 # Usage
-In the home page the user has access to a search bar where marvel characters will auto populate if the user is not familiar with marvel characters. After searching a character the character will appear as well as a mini biography and a list of movies where that character is included. The user has the ability to click on the movies which a screen will populate showing the user the plot of the moview, ratings, year and the ability to add it to their watchlist. The marvel image will serve as a home button allowing the user to return back to the home page.
+In the home page the user has access to a search bar where marvel characters will auto populate if the user is not familiar with marvel characters. After searching a character the character will appear as well as a mini biography and a list of movies where that character is included. The user has the ability to click on the movies which a screen will populate showing the user the plot of the movie, ratings, year and the ability to add it to their watchlist. The marvel image will serve as a home button allowing the user to return back to the home page.
 
 # Screenshot
 ![](./assets/images/Screenshot-1.png) 
