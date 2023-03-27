@@ -12,7 +12,8 @@ console.log(strHash);
 let watchlist = [];
 getWatchlist();
 
-
+// Function added in order to populate information about spider-man due
+// OMDb API not populating Spider-Man.
 function searchCharacter() {
     let input = $inputEl.val().trim();
     let character = '';
@@ -23,6 +24,8 @@ function searchCharacter() {
     }
     const url = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${character}&limit=20&ts=${ts}&apikey=${publicKey}&hash=${strHash}`;
     
+    // Function to have a error message populate in case a character's name
+    // is written incorrectly
     fetch(url) 
     .then(response => response.json())
     .then(function(data) {
@@ -50,6 +53,7 @@ function searchCharacter() {
         $inputEl.val('');
     })
 }
+// Function to pull movie list from OMDb API where a specific character appears
 function listMovies() {
     const input = $inputEl.val().trim();
     const OMDB_URL =  `https://www.omdbapi.com/?s=${input}&apikey=${API_KEY}&type=movie`;
@@ -75,6 +79,7 @@ function listMovies() {
     })
     .catch(function(error){console.log(error);});
 }
+// Using OMDb API to pull movies that inlcude a specific information
 function renderMovie(event) {
     event.stopPropagation();
     let e = event.target;
@@ -105,6 +110,7 @@ function renderMovie(event) {
         .catch(function(error){console.log(error);});
     }
 }
+// OMBd API function to include rating, description of movie, and year to populate
 function renderMovieFromWatchlist(event) {
     showWatchlist();
     event.stopPropagation();
@@ -133,6 +139,7 @@ function closeModal_1(){
     $modal_1.removeClass('is-active');
     $('#poster-1').children('img').remove();
 }
+// Both function to activate, get, and show watchlist
 function setWatchlist(){
     let movieTitle = $('#movieTitle-1').text();
     if(watchlist.includes(movieTitle)){
@@ -170,6 +177,7 @@ function showWatchlist() {
         $('.dropdown').removeClass('is-active');
     }
 }
+// Function to remove from watchlist 
 function removeFromWatchlist() {
     let movieTitle = $('#movieTitle-2').text();
     console.log(movieTitle);
@@ -207,6 +215,7 @@ $(function () {
       source: characterNames,
     });
 });
+// Activate search button 
 $buttonEl.on("click", function(){
     searchCharacter();
 });
@@ -232,7 +241,7 @@ $('#closeIcon-4').on('click', function(){
     $('.modal-4').removeClass('is-active');
 });
 
-
+// function to hide elements when not being searched
 function hideElements() {
     document.getElementById("introColumns").style.display = "none";
   }
