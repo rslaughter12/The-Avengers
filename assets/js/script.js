@@ -8,10 +8,11 @@ const privateKey = "d86594961cf97e04100c02fa85ade28df00495a8";
 const publicKey = "d2fccda0b0d266ecc697390db7fb28c9";
 const ts = Number(new Date());
 var strHash = md5(ts + privateKey + publicKey);
-let watchlist = [];
+let watchlist = [];// array to store the movies
 
 getWatchlist();
 
+// function to search the character
 function searchCharacter(input) {
     let character = '';
     // if condition is added in order to populate information about spider-man due
@@ -55,6 +56,8 @@ function searchCharacter(input) {
         $inputEl.val('');
     })
 }
+
+// function to list movies of the character
 function listMovies(input) {
     $('#movies').text('');
     const OMDB_URL =  `https://www.omdbapi.com/?s=${input}&apikey=${API_KEY}&type=movie`;
@@ -76,8 +79,8 @@ function listMovies(input) {
         }        
     })
 }
-// Using OMDb API to pull movies that inlcude a specific information
 
+// Using OMDb API to pull movies that inlcude a specific information
 function renderMovie(event) {
     event.stopPropagation();
     let e = event.target;
@@ -102,8 +105,8 @@ function renderMovie(event) {
         })
     }
 }
-// OMBd API function to include rating, description of movie, and year to populate
 
+// OMBd API function to include rating, description of movie, and year to populate
 function renderMovieFromWatchlist(event) {
     showWatchlist();
     event.stopPropagation();
@@ -134,8 +137,8 @@ function closeModal_1(){
     $modal_1.removeClass('is-active');
     $('#poster-1').children('img').remove();
 }
-// Both function to activate, get, and show watchlist
 
+// Both function to activate, get, and show watchlist
 function setWatchlist(){
     let movieTitle = $('#movieTitle-1').text();
     if(watchlist.includes(movieTitle)){
@@ -165,6 +168,7 @@ function getWatchlist(){
     }
 }
 
+//function to show/close the watchlist
 function showWatchlist() {
     if($('.dropdown').attr('class') === 'dropdown'){
         $('.dropdown').addClass('is-active');
@@ -172,8 +176,8 @@ function showWatchlist() {
         $('.dropdown').removeClass('is-active');
     }
 }
-// Function to remove from watchlist 
 
+// Function to remove movie from watchlist 
 function removeFromWatchlist() {
     let movieTitle = $('#movieTitle-2').text();
     if(watchlist.includes(movieTitle)){
@@ -191,6 +195,22 @@ function closeModal_2(){
     $('#poster-2').children('img').remove();
 }
 
+//function to choose the character when clicked from the footer 
+function clickCharacter(event) {
+    let character = event.target.dataset.character;
+    showElements();
+    searchCharacter(character);
+}
+
+// function to hide the home page
+function hideElements() {
+    document.getElementById("introColumns").style.display = "none";
+}
+
+function showElements() {
+    document.getElementById("searchElements").classList.remove("is-hidden");
+}
+
 // Autocomplete widget
 $(function () {
     let characterNames = [
@@ -206,6 +226,12 @@ $(function () {
       'Spider-Man',
       'Doctor Strange',
       'Deadpool',
+      'S.H.I.E.L.D.',
+      'Clint Barton',
+      'She-Hulk',
+      'Silver Surfer',
+      'Star-Lord',
+      'Storm',
     ];
     $('#inputField').autocomplete({
       source: characterNames,
@@ -221,6 +247,8 @@ $buttonEl.on("click", function(){
         searchCharacter(input);
     }
 });
+
+//Event listeners
 $thirdDiv.on("click", renderMovie);
 $('.cancel-1').on('click', closeModal_1);
 $('#closeIcon-1').on('click', closeModal_1);
@@ -243,11 +271,5 @@ $('#closeIcon-4').on('click', function(){
     $('.modal-4').removeClass('is-active');
 });
 
-// function to hide elements when not being searched
-function hideElements() {
-    document.getElementById("introColumns").style.display = "none";
-  }
-  function showElements() {
-    document.getElementById("searchElements").classList.remove("is-hidden");
-  }
+
 
