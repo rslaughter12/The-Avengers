@@ -12,7 +12,8 @@ let watchlist = [];
 
 getWatchlist();
 
-
+// Function added in order to populate information about spider-man due
+// OMDb API not populating Spider-Man.
 function searchCharacter(input) {
     let character = '';
     if(input === 'Spider-Man'){
@@ -22,6 +23,8 @@ function searchCharacter(input) {
     }
     const url = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${character}&limit=20&ts=${ts}&apikey=${publicKey}&hash=${strHash}`;
     
+    // Function to have a error message populate in case a character's name
+    // is written incorrectly
     fetch(url) 
     .then(response => response.json())
     .then(function(data) {
@@ -73,6 +76,7 @@ function listMovies(input) {
         }        
     })
 }
+// Using OMDb API to pull movies that inlcude a specific information
 
 function renderMovie(event) {
     event.stopPropagation();
@@ -98,6 +102,7 @@ function renderMovie(event) {
         })
     }
 }
+// OMBd API function to include rating, description of movie, and year to populate
 
 function renderMovieFromWatchlist(event) {
     showWatchlist();
@@ -129,6 +134,7 @@ function closeModal_1(){
     $modal_1.removeClass('is-active');
     $('#poster-1').children('img').remove();
 }
+// Both function to activate, get, and show watchlist
 
 function setWatchlist(){
     let movieTitle = $('#movieTitle-1').text();
@@ -166,6 +172,7 @@ function showWatchlist() {
         $('.dropdown').removeClass('is-active');
     }
 }
+// Function to remove from watchlist 
 
 function removeFromWatchlist() {
     let movieTitle = $('#movieTitle-2').text();
@@ -204,21 +211,7 @@ $(function () {
       source: characterNames,
     });
 });
-
-function hideElements() {
-    document.getElementById("introColumns").style.display = "none";
-}
-
-function showElements() {
-    document.getElementById("searchElements").classList.remove("is-hidden");
-}
-
-function clickCharacter(event) {
-    let character = event.target.dataset.character;
-    showElements();
-    searchCharacter(character);
-}
-
+// Activate search button 
 $buttonEl.on("click", function(){
     let input = $inputEl.val().trim();
     if(!input){
@@ -250,5 +243,11 @@ $('#closeIcon-4').on('click', function(){
     $('.modal-4').removeClass('is-active');
 });
 
-
+// function to hide elements when not being searched
+function hideElements() {
+    document.getElementById("introColumns").style.display = "none";
+  }
+  function showElements() {
+    document.getElementById("searchElements").classList.remove("is-hidden");
+  }
 

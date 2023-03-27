@@ -1,5 +1,5 @@
 .navbar-bg {
-    background-image: url(./marvel.jpg);
+    background-image: url("../images/marvel.jpg");
     background-position: 0%;
 }
 .marvelPhotos {
