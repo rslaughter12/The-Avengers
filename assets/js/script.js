@@ -86,7 +86,7 @@ function renderMovie(event) {
     let e = event.target;
     if(e.matches(".movie")){
         let movieId = e.getAttribute('titleId');
-        let movieURL = `http://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}`;
+        let movieURL = `https://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}`;
         fetch(movieURL)
         .then(response => response.json())
         .then(function(data) {
@@ -113,7 +113,7 @@ function renderMovieFromWatchlist(event) {
     let e = event.target;
     if(e.matches(".dropdown-item")){
         let movieTitle = e.textContent;
-        let movieURL = `http://www.omdbapi.com/?apikey=${API_KEY}&t=${movieTitle}`;
+        let movieURL = `https://www.omdbapi.com/?apikey=${API_KEY}&t=${movieTitle}`;
         fetch(movieURL)
         .then(response => response.json())
         .then(function(data) {
